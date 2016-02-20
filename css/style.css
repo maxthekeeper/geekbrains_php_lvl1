@@ -13,20 +13,25 @@
 
 #ss_menu {
   width: 100%;
+  margin: 20px 0;
 }
 
 .ss_button {
-  background-color: #324e61;
-  border-bottom: 1px solid #FFFFFF;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
   cursor: pointer;
   padding: 10px;
-  color: #FFFFFF;
+  color: #333;
+  border-radius: 4px;
 }
 
 .ss_content {
-  background-color: #455e70;
+  background-color: #fff;
   display: none;
   padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  height: 400px;
 }
 
 .ss_content img {

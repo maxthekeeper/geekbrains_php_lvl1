@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PHP Level 1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -25,109 +24,162 @@
 
                 <!-- Branding Image -->
                 
-                <a class="navbar-brand" href="/">
-                    <i class="fa fa-home"></i> PHP Level 1
+                <a class="navbar-brand" href="index.php">
+                    PHP Level 1
                 </a>
-            </div>            
+            </div>
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">PHP Level 2</a></li>                    
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div class="container">
         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
             <li class="active"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
-            <li><a href="#orange" data-toggle="tab">Orange</a></li>
-            <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
-            <li><a href="#green" data-toggle="tab">Green</a></li>
-            <li><a href="#blue" data-toggle="tab">Blue</a></li>
+            <li><a href="#lesson2" data-toggle="tab">Урок 2</a></li>            
         </ul>
         <div id="my-tab-content" class="tab-content">
             <div class="tab-pane active" id="lesson1">
-                <div class="row"><br>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Задание 1</div>
-
-                            <div class="panel-body">
-                                Тут будет текст задания.
+                                
+                <!-- Accordion -->
+                <div id="ss_menu">
+                    <div class="ss_button">Задание 1</div>
+                    <div class="ss_content">
+                        <div class="col-md-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">Условие</div>
+                                <div class="panel-body">
+                                    <p>С помощью оператора echo выведите на страницу:</p>
+                                    <ol type="a">
+                                        <li>Целочисленную переменную</li>
+                                        <li>Переменную дробного типа</li>
+                                        <li>Переменную булевского типа</li>
+                                        <li>Строковую переменную</li>
+                                        <li>Константу</li>
+                                    </ol>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Решение</div>
+                                <div class="panel-body">
+                                    <?php
+                                        $int = 15;
+                                        $fl = 23.65;
+                                        $bool = true;
+                                        $str = "Some random text";
+                                        define("PI_CONST", 3.14);
+                                    ?>
+                                    <p>Вывод переменных и констант с помощью оператора echo в форме короткой записи:<br> &lt;?=$int;?&gt;</p>
+                                    <ol type="a">
+                                        <li><?=$int;?></li>
+                                        <li><?=$fl;?></li>
+                                        <li><?=$bool;?></li>
+                                        <li><?=$str;?></li>
+                                        <li><?=PI_CONST;?></li>
+                                    </ol>                                    
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Задание 1</div>
-
-                            <div class="panel-body">
-                                Тут будет текст задания.
+                    <div class="ss_button">Задание 2</div>
+                    <div class="ss_content">
+                        <div class="col-md-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">Условие</div>
+                                <div class="panel-body">
+                                    <p>Повторите вывод, заключив переменные в двойные кавычки (“). Посмотрите, что получится. Объясните результат.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Решение</div>
+                                <div class="panel-body">
+                                    <p>Вывод переменных и констант в двойных (") кавычках:</p>
+                                    <ol type="a">
+                                        <li><?="$int";?></li>
+                                        <li><?="$fl";?></li>
+                                        <li><?="$bool";?></li>
+                                        <li><?="$str";?></li>
+                                        <li><?="PI_CONST";?></li>
+                                    </ol>
+                                    <p>При заключении переменных в двойные кавычки, выводятся их значения, т.к. они обрабатываются интерпретатором. При заключении в двойные кавычки константы, выводится только её имя.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Задание 1</div>
-
-                            <div class="panel-body">
-                                Тут будет текст задания.
+                    <div class="ss_button">Задание 3</div>
+                    <div class="ss_content">
+                        <div class="col-md-4">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">Условие</div>
+                                <div class="panel-body">
+                                    <p>Повторите вывод, заключив переменные в одинарные кавычки (‘). Посмотрите, что получится. Объясните результат.</p>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Решение</div>
+                                <div class="panel-body">
+                                    <p>Вывод переменных и констант в одинарных (') кавычках:</p>
+                                    <ol type="a">
+                                        <li><?='$int';?></li>
+                                        <li><?='$fl';?></li>
+                                        <li><?='$bool';?></li>
+                                        <li><?='$str';?></li>
+                                        <li><?='PI_CONST';?></li>
+                                    </ol>
+                                    <p>При заключении переменных в одинарные кавычки, выводятся их имена, т.к. переменные НЕ обрабатываются интерпретатором. Константы ведут себя так же, как при заключении в двойные качки.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ss_button">Задание 4</div>
+                    <div class="ss_content">
+                        <div class="col-md-5">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">Условие</div>
+                                <div class="panel-body">
+                                    <p>Выведите на экран любое четверостишие. Пример:<p>
+                                    «Славная осень! Здоровый, ядреный<br>
+                                    Воздух усталые силы бодрит;<br>
+                                    Лед неокрепший на речке студеной<br>
+                                    Словно как тающий сахар лежит.»<br>
+                                    Н. А. Некрасов<br><br>
+                                    <p>Для каждой новой строки используйте отдельный оператор echo. Каждая строчка должна быть отдельной строковой переменной. Также необходимо использовать переводы строки. После четверостишия поставьте инициалы автора и сделайте их подчёркнутыми.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Решение</div>
+                                <div class="panel-body">
+                                    <?php
+                                        $str1 = "Славная осень! Здоровый, ядреный";
+                                        $str2 = "Воздух усталые силы бодрит;";
+                                        $str3 = "Лед неокрепший на речке студеной";
+                                        $str4 = "Словно как тающий сахар лежит.";
+                                    ?>
+                                    
+                                    <?="&laquo; &raquo;"?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="orange">
-                <h1>Orange</h1>
-                <p>orange orange orange orange orange</p>
-            </div>
-            <div class="tab-pane" id="yellow">
-                <h1>Yellow</h1>
-                <p>yellow yellow yellow yellow yellow</p>
-            </div>
-            <div class="tab-pane" id="green">
-                <h1>Green</h1>
-                <p>green green green green green</p>
-            </div>
-            <div class="tab-pane" id="blue">
-                <h1>Blue</h1>
-                <p>blue blue blue blue blue</p>
-            </div>
-
-            <img class="logo" src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_logo.png" alt="The Source Logo">
-            <div id="ss_menu">
-              <div class="ss_button">1994</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_52/pages/1.jpg" alt="#52"></a>
-              </div>
-              <div class="ss_button">1995</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_64/pages/1.jpg" alt="#64"></a> <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_69/pages/1.jpg" alt="#69"></a>
-              </div>
-              <div class="ss_button">1996</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_79/pages/1.jpg" alt="#79"></a> <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_86/pages/1.jpg" alt="#86"></a>
-              </div>
-              <div class="ss_button">1997</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_91/pages/1.jpg" alt="#91"></a>
-              </div>
-              <div class="ss_button">1998</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_100/pages/1.jpg" alt="#100"></a>
-              </div>
-              <div class="ss_button">2000</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_135/pages/1.jpg" alt="#135"></a>
-              </div>
-              <div class="ss_button">2001</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_139/pages/1.jpg" alt="#139"></a>
-              </div>
-              <div class="ss_button">2002</div>
-              <div class="ss_content">
-                <a href="#"><img src="http://maxthekeeper.myjino.ru/uploads/magazines/the_source_148/pages/1.jpg" alt="#148"></a>
-              </div>
+            <div class="tab-pane" id="lesson2">
+                <p>Скоро будет!</p>
             </div>
         </div>
-    </div>
-
-    
+    </div>    
 
     <!-- JavaScripts -->
     <script src="js/jquery.min.js"></script>
