@@ -42,11 +42,21 @@
 			<li class="active"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
 			<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li>            
 		</ul>
+		
+		<?php
+		/***************************************
+		 * Урок 1
+		 ***************************************/
+		?>
 		<div id="my-tab-content" class="tab-content">
 			<div class="tab-pane active" id="lesson1">
-								
+				
 				<div id="ss_menu">
-					<!-- Задание 1 -->
+					<?php
+					/***************************************
+					 * Задание 1
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 1</div>
 					<div class="ss_content" style="height:255px">
 						<div class="col-md-4">
@@ -87,7 +97,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 2 -->
+					<?php
+					/***************************************
+					 * Задание 2
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 2</div>
 					<div class="ss_content" style="height:285px">
 						<div class="col-md-4">
@@ -115,7 +129,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 3 -->
+					<?php
+					/***************************************
+					 * Задание 3
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 3</div>
 					<div class="ss_content" style="height:285px">
 						<div class="col-md-4">
@@ -143,7 +161,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 4 -->
+					<?php
+					/***************************************
+					 * Задание 4
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 4</div>
 					<div class="ss_content" style="height:325px">
 						<div class="col-md-8">
@@ -181,7 +203,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 5 -->
+					<?php
+					/***************************************
+					 * Задание 5
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 5</div>
 					<div class="ss_content" style="height:195px">
 						<div class="col-md-8">
@@ -213,7 +239,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 6 -->
+					<?php
+					/***************************************
+					 * Задание 6
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 6</div>
 					<div class="ss_content" style="height:175px">
 						<div class="col-md-6">
@@ -238,7 +268,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 7 -->
+					<?php
+					/***************************************
+					 * Задание 7
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 7</div>
 					<div class="ss_content" style="height:335px">
 						<div class="col-md-5">
@@ -281,7 +315,11 @@
 							</div>
 						</div>
 					</div>
-					<!-- Задание 8 -->
+					<?php
+					/***************************************
+					 * Задание 8
+					 ***************************************/
+					?>
 					<div class="ss_button">Задание 8 (*)</div>
 					<div class="ss_content" style="height:300px">
 						<div class="col-md-5">
@@ -326,8 +364,181 @@
 					</div>
 				</div>
 			</div>
+			
+			<?php
+			/***************************************
+			 * Урок 2
+			 ***************************************/
+			?>
 			<div class="tab-pane" id="lesson2">
-				<p>...</p>
+				<div id="ss_menu">
+					<?php
+					/***************************************
+					 * Задание 1
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 1</div>
+					<div class="ss_content" style="height:265px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>Объявите две целочисленные переменные $a и $b и задайте им произвольные начальные значения. Затем напишите скрипт, который работает по следующему принципу:</p>
+									<ol type="a">
+										<li>если $a и $b положительные, выведите их разность;</li>
+										<li>если $а и $b отрицательные, выведите их произведение;</li>
+										<li>если $а и $b разных знаков, выведите их сумму.</li>									
+									</ol>
+									<p>Ноль можно считать положительным числом.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					/***************************************
+					 * Задание 2
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 2</div>
+					<div class="ss_content" style="height:260px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>Присвойте переменной $а значение в промежутке [0..15]. С помощью оператора switch организуйте вывод чисел от $a до 15;</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>                                
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					/***************************************
+					 * Задание 3
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 3</div>
+					<div class="ss_content" style="height:260px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>Реализуйте основные 4 арифметические операции (+, -, *, %) в виде функций с двумя параметрами. Обязательно используйте оператор return.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>                                
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					/***************************************
+					 * Задание 4
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 4</div>
+					<div class="ss_content" style="height:260px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>Реализуйте функцию с тремя параметрами: function mathOperation($arg1, $arg2, $operation), где $arg1, $arg2 – значения аргументов, $operation – строка с названием операции. В зависимости от переданного значения операции выполните одну из арифметических операций (используйте функции из пункта 4) и верните полученное значение (используйте switch).</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>                                
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					/***************************************
+					 * Задание 5
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 5</div>
+					<div class="ss_content" style="height:260px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>С помощью рекурсии организуйте функцию возведения числа в степень. Формат: function power($val, $pow), где $val – заданное число, $pow – степень.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>                                
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+					/***************************************
+					 * Задание 6
+					 ***************************************/
+					?>
+					<div class="ss_button">Задание 6</div>
+					<div class="ss_content" style="height:260px">
+						<div class="col-md-6">
+							<div class="panel panel-danger">
+								<div class="panel-heading">Условие</div>
+								<div class="panel-body">
+									<p>Напишите функцию, которая вычисляет текущее время и возвращает его в формате с правильными склонениями, например:<br>
+									22 часа 15 минут<br>
+									21 час 43 минуты<br>
+									и тд.<br>
+									Подсказка: часы и минуты можно узнать с помощью встроенной функции PHP – date.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="panel panel-success">
+								<div class="panel-heading">Решение</div>
+								<div class="panel-body">
+									<?php
+										
+									?>                                
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>    
