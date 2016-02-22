@@ -378,7 +378,7 @@
 					 ***************************************/
 					?>
 					<div class="ss_button">Задание 1</div>
-					<div class="ss_content" style="height:265px">
+					<div class="ss_content" style="height:275px">
 						<div class="col-md-6">
 							<div class="panel panel-danger">
 								<div class="panel-heading">Условие</div>
@@ -397,8 +397,25 @@
 							<div class="panel panel-success">
 								<div class="panel-heading">Решение</div>
 								<div class="panel-body">
+									<p>Я решил расширить задание и написать функцию, которая принимает два параметра и в зависимости от условия, выводит на печать результат. Подробности реализации - в исходном коде (строка 402).</p>
 									<?php
-										
+										function math_ops($a, $b)
+										{
+											if ($a >= 0 && $b >= 0)
+												echo $a - $b . '<br>';
+											else if ($a < 0 && $b < 0)
+												echo $a * $b . '<br>';
+											else if (($a >= 0 && $b < 0) ||
+													 ($a < 0 && $b >= 0))
+												echo $a + $b . '<br>';
+										}
+									?>
+									<p>Проверка работоспособности функции:</p>
+									<?php
+										math_ops(5, 9);
+										math_ops(-6, -3);
+										math_ops(-9, 5);
+										math_ops(9, -5);
 									?>
 								</div>
 							</div>
