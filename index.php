@@ -402,20 +402,20 @@
 										function math_ops($a, $b)
 										{
 											if ($a >= 0 && $b >= 0)
-												echo $a - $b . '<br>';
+												echo $a - $b;
 											else if ($a < 0 && $b < 0)
-												echo $a * $b . '<br>';
+												echo $a * $b;
 											else if (($a >= 0 && $b < 0) ||
 													 ($a < 0 && $b >= 0))
-												echo $a + $b . '<br>';
+												echo $a + $b;
 										}
 									?>
 									<p>Проверка работоспособности функции:</p>
 									<?php
-										math_ops(5, 9);
-										math_ops(-6, -3);
-										math_ops(-9, 5);
-										math_ops(9, -5);
+										math_ops(5, 9); echo ' ($a = 5, $b = 9)<br>';
+										math_ops(-6, -3); echo ' ($a = -6, $b = -3)<br>';
+										math_ops(-9, 5); echo ' ($a = -9, $b = 5)<br>';
+										math_ops(9, -5); echo ' ($a = 9, $b = -5)<br>';
 									?>
 								</div>
 							</div>
@@ -427,7 +427,7 @@
 					 ***************************************/
 					?>
 					<div class="ss_button">Задание 2</div>
-					<div class="ss_content" style="height:260px">
+					<div class="ss_content" style="height:445px">
 						<div class="col-md-6">
 							<div class="panel panel-danger">
 								<div class="panel-heading">Условие</div>
@@ -440,9 +440,46 @@
 							<div class="panel panel-success">
 								<div class="panel-heading">Решение</div>
 								<div class="panel-body">
+									<p>Проверка:</p>
 									<?php
-										
-									?>                                
+										$a = 0;
+
+										switch ($a) {
+											case '0':
+												echo $a++ . '<br>';
+											case '1':
+												echo $a++ . '<br>';
+											case '2':
+												echo $a++ . '<br>';
+											case '3':
+												echo $a++ . '<br>';
+											case '4':
+												echo $a++ . '<br>';
+											case '5':
+												echo $a++ . '<br>';
+											case '6':
+												echo $a++ . '<br>';
+											case '7':
+												echo $a++ . '<br>';
+											case '8':
+												echo $a++ . '<br>';
+											case '9':
+												echo $a++ . '<br>';
+											case '10':
+												echo $a++ . '<br>';
+											case '11':
+												echo $a++ . '<br>';
+											case '12':
+												echo $a++ . '<br>';
+											case '13':
+												echo $a++ . '<br>';
+											case '14':
+												echo $a++ . '<br>';
+											case '15':
+												echo $a++ . '<br>';
+										}
+									?>
+									<p>Подробности решения см. в исходном коде (строка 445).</p>
 								</div>
 							</div>
 						</div>
