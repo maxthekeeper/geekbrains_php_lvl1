@@ -41,7 +41,8 @@
 		<div class="container">
 			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 				<li class="active"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
-				<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li>            
+				<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li> 
+				<li><a href="#lesson3" data-toggle="tab">Урок 3</a></li> 				           
 			</ul>
 			
 <?php
@@ -58,6 +59,7 @@
  * Задание 1
  ***************************************/
 ?>
+						<h3>Основы PHP</h3>
 						<div class="ss_button">Задание 1</div>
 						<div class="ss_content" style="height:255px">
 							<div class="col-md-4">
@@ -377,6 +379,7 @@
  * Задание 1
  ***************************************/
 ?>
+						<h3>Ветвления и функции</h3>
 						<div class="ss_button">Задание 1</div>
 						<div class="ss_content" style="height:275px">
 							<div class="col-md-6">
@@ -686,6 +689,247 @@
 						</div>
 					</div>
 				</div>
+
+<?php
+/***************************************
+ * УРОК 3
+ ***************************************/
+?>
+				<div class="tab-pane" id="lesson3">
+					<div id="ss_menu">
+<?php
+/***************************************
+ * Задание 1
+ ***************************************/
+?>
+						<h3>Циклы и массивы</h3>
+						<div class="ss_button">Задание 1</div>
+						<div class="ss_content" style="height:165px">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>С помощью цикла while выведите все числа в промежутке от 0 до 100, которые делятся на 3 без остатка. </p>									
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+										<p>Решение на строке 721.</p>
+										<?php
+											$i = 0;
+											while ($i <= 100) {
+												$i++;
+												if (!($i % 3))
+													echo $i . ' | ';										
+											}
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 2
+ ***************************************/
+?>
+						<div class="ss_button">Задание 2</div>
+						<div class="ss_content" style="height:265px">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>С помощью цикла do…while напишите функцию для вывода чисел от 0 до 10, чтобы результат выглядел так:<br>
+										0 – это ноль<br>
+										1 – нечетное число<br>
+										2 – четное число<br>
+										3 – нечетное число<br>
+										…<br>
+										10 – четное число</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">										
+										<?php
+											
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 3
+ ***************************************/
+?>
+						<div class="ss_button">Задание 3 (*)</div>
+						<div class="ss_content" style="height:295px">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Выведите с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. То есть выглядеть должно вот так:<br>
+										for(…){// здесь пусто}</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">										
+										<?php
+
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 4
+ ***************************************/
+?>
+						<div class="ss_button">Задание 4</div>
+						<div class="ss_content" style="height:325px">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Объявите массив, где в качестве ключей будут использоваться названия областей, а в качестве значений – массивы с названиями городов из соответствующей области. Выведите в цикле значения массива, чтобы результат был таким:<br>
+										Московская область:<br>
+										Москва, Зеленоград, Клин<br>
+										Ленинградская область:<br>
+										Санкт-Петербург, Всеволожск, Павловск, Кронштадт<br>
+										Рязанская область<br>
+										…<br>
+										(названия городов можно найти на maps.yandex.ru)</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">										
+										<?php
+											
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 5
+ ***************************************/
+?>
+						<div class="ss_button">Задание 5 (*)</div>
+						<div class="ss_content" style="height:175px">
+							<div class="col-md-6">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Повторите предыдущее задание, но выводите на экран только города, начинающиеся с буквы «К».</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+										<?php
+											
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 6
+ ***************************************/
+?>
+						<div class="ss_button">Задание 6</div>
+						<div class="ss_content" style="height:225px">
+							<div class="col-md-7">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Объявите массив, индексами которого являются буквы русского языка, а значениями – соответствующие латинские буквосочетания (‘а’=> ’a’, ‘б’ => ‘b’, ‘в’ => ‘v’, ‘г’ => ‘g’, …, ‘э’ => e’, ‘ю’ => ‘yu’, ‘я’ => ‘ya’).<br>
+										Напишите функцию транслитерации строк.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+										<?php
+											
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 7
+ ***************************************/
+?>
+						<div class="ss_button">Задание 7</div>
+						<div class="ss_content" style="height:225px">
+							<div class="col-md-7">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Напишите функцию, которая заменяет в строке пробелы на подчеркивания и возвращает видоизмененную строчку.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+										<?php
+											
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+<?php
+/***************************************
+ * Задание 8
+ ***************************************/
+?>
+						<div class="ss_button">Задание 8</div>
+						<div class="ss_content" style="height:225px">
+							<div class="col-md-7">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Объедините две ранее написанные функции в одну, которая получает строку на русском языке, производит транслитерацию и замену пробелов на подчеркивания (аналогичная задача решается при конструировании url-адресов на основе названия статьи в блогах). </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+										<?php
+											
+										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
