@@ -430,7 +430,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 2</div>
-						<div class="ss_content" style="height:475px">
+						<div class="ss_content" style="height:175px">
 							<div class="col-md-6">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -449,37 +449,37 @@
 
 											switch ($a) {
 												case '0':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '1':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '2':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '3':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '4':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '5':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '6':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '7':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '8':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '9':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '10':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '11':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '12':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '13':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '14':
-													echo $a++ . '<br>';
+													echo $a++ . ' | ';
 												case '15':
-													echo $a . '<br>';
+													echo $a;
 											}
 										?>
 										<p>Подробности решения см. в исходном коде (строка 445).</p>
@@ -551,7 +551,7 @@
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
 									<div class="panel-body">
-										<p>Реализуйте функцию с тремя параметрами: function mathOperation($arg1, $arg2, $operation), где $arg1, $arg2 – значения аргументов, $operation – строка с названием операции. В зависимости от переданного значения операции выполните одну из арифметических операций (используйте функции из пункта 4) и верните полученное значение (используйте switch).</p>
+										<p>Реализуйте функцию с тремя параметрами: function mathOperation($arg1, $arg2, $operation), где $arg1, $arg2 – значения аргументов, $operation – строка с названием операции. В зависимости от переданного значения операции выполните одну из арифметических операций (используйте функции из пункта 3) и верните полученное значение (используйте switch).</p>
 									</div>
 								</div>
 							</div>
@@ -565,19 +565,19 @@
 											{
 												switch ($operation) {
 													case '+':
-														return $arg1 + $arg2;
+														return sum($arg1, $arg2);
 														break;
 													case '-':
-														return $arg1 - $arg2;
+														return difference($arg1, $arg2);
 														break;
 													case '*':
-														return $arg1 * $arg2;
+														return multiply($arg1, $arg2);
 														break;
 													case '/':
-														return $arg1 / $arg2;
+														return division($arg1, $arg2);
 														break;
 													case '%':
-														return $arg1 % $arg2;
+														return module($arg1, $arg2);
 														break;											
 												}
 											}
@@ -616,15 +616,15 @@
 										<?php
 											function power($val, $pow)
 											{
-												if ($pow > 1)
-												{
-													return $val * power($val, $pow - 1);
-												}
-												return $val;
+                                                if ($pow < 0)
+                                                    return $val * power(1/$val, -$pow);
+                                                if ($pow == 0)
+                                                    return 1;
+                                                return $val * power($val, $pow - 1);												
 											}
 										?>
 										<p>Проверка:<br>
-										2<sup>10</sup> = <?=power(2, 10);?>
+										2 <sup>-3</sup> = <?=power(2, -3);?>
 										</p>
 									</div>
 								</div>
@@ -717,7 +717,7 @@
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>Решение на строке 721.</p>
+										<p>См. код (строка 721).</p>
 										<?php
 											$i = 0;
 											while ($i <= 100) {
@@ -736,7 +736,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 2</div>
-						<div class="ss_content" style="height:265px">
+						<div class="ss_content" style="height:345px">
 							<div class="col-md-6">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -754,9 +754,20 @@
 							<div class="col-md-6">
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
-									<div class="panel-body">										
+									<div class="panel-body">
+                                        <p>См. код (строка 759).</p>
 										<?php
-											
+											$i = 0;
+                                            do {
+                                                if ($i == 0) {
+                                                    echo $i . ' - это ноль<br>';
+                                                } elseif (!($i % 2)) {
+                                                    echo $i . ' - это четное число<br>';
+                                                } else {
+                                                    echo $i . ' - это нечетное число<br>';
+                                                }
+                                                $i++;                                                
+                                            } while ($i <= 10);
 										?>
 									</div>
 								</div>
@@ -768,8 +779,8 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 3 (*)</div>
-						<div class="ss_content" style="height:295px">
-							<div class="col-md-6">
+						<div class="ss_content" style="height:145px">
+							<div class="col-md-9">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
 									<div class="panel-body">
@@ -778,12 +789,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-3">
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
-									<div class="panel-body">										
+									<div class="panel-body">
+                                        <p>См. код (строка 797).</p>										
 										<?php
-
+                                            for ($i = 0; $i < 10; print $i . ' | ', $i++);
 										?>										
 									</div>
 								</div>
@@ -814,9 +826,43 @@
 							<div class="col-md-6">
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
-									<div class="panel-body">										
-										<?php
-											
+									<div class="panel-body">
+                                        <p>См. код (строка 831).</p>
+                                        <?php
+											$array = [
+                                                "Московская область" => [
+                                                    "Москва",
+                                                    "Балашиха",
+                                                    "Долгопрудный",
+                                                    "Пушкино",
+                                                    "Клин"
+                                                ],
+                                                "Ленинградская область" => [
+                                                    "Санкт-Петербург",                                                    
+                                                    "Гатчина",
+                                                    "Тосно",
+                                                    "Кингисепп"
+                                                ],
+                                                "Рязанская область" => [
+                                                    "Рязань",
+                                                    "Кораблино",
+                                                    "Захарово",
+                                                    "Старожилово"
+                                                ]
+                                            ];
+
+                                            foreach ($array as $key => $value) {
+                                                echo '<b>' . $key . ':</b><br>'; 
+                                                $n = 1;                                               
+                                                foreach ($value as $city) {
+                                                    if ($n == count($value)) { // убираем запятую после последнего города
+                                                        echo $city . '<br>';                                                        
+                                                    } else {
+                                                        echo $city . ', ';
+                                                    }
+                                                    $n++;
+                                                }
+                                            }
 										?>										
 									</div>
 								</div>
@@ -828,7 +874,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 5 (*)</div>
-						<div class="ss_content" style="height:175px">
+						<div class="ss_content" style="height:245px">
 							<div class="col-md-6">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -841,8 +887,16 @@
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
+                                        <p>См. код (строка 891).</p>
 										<?php
-											
+											foreach ($array as $key => $value) {
+                                                echo '<b>' . $key . ':</b><br>';
+                                                foreach ($value as $city) {
+                                                    if(mb_substr($city, 0, 1) == 'К') {
+                                                        echo $city . '<br>';
+                                                    }
+                                                }
+                                            }
 										?>										
 									</div>
 								</div>
@@ -854,7 +908,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 6</div>
-						<div class="ss_content" style="height:225px">
+						<div class="ss_content" style="height:185px">
 							<div class="col-md-7">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -868,8 +922,24 @@
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
+                                        <p>См. код (строка 925).</p>
 										<?php
-											
+                                            function rus2lat($string) 
+                                            {
+                                                $chars = [
+                                                    "а" => "a", "б" => "b", "в" => "v", "г" => "g", "д" => "d",
+                                                    "е" => "e", "ё" => "yo", "ж" => "zh", "з" => "z", "и" => "i",
+                                                    "й" => "y", "к" => "k", "л" => "l", "м" => "m", "н" => "n",
+                                                    "о" => "o", "п" => "p", "р" => "r", "с" => "s", "т" => "t",
+                                                    "у" => "u", "ф" => "f", "х" => "h", "ц" => "ts", "ч" => "ch",
+                                                    "ш" => "sh", "щ" => "sch", "ъ" => "", "ы" => "y", "ь" => "",
+                                                    "э" => "e", "ю" => "yu", "я" => "ya"
+                                                ];
+                                                $string = mb_strtolower($string);
+                                                return strtr($string, $chars);
+                                            }
+
+                                            echo rus2lat('Каждый охотник желает знать где сидит фазан');
 										?>										
 									</div>
 								</div>
@@ -881,7 +951,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 7</div>
-						<div class="ss_content" style="height:225px">
+						<div class="ss_content" style="height:145px">
 							<div class="col-md-7">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -894,8 +964,14 @@
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
+                                        <p>См. код (строка 968).</p>
 										<?php
-											
+											function replace($str) 
+                                            {
+                                                return str_replace(' ', '_', $str);
+                                            }
+
+                                            echo replace('Каждый охотник желает знать где сидит фазан');
 										?>										
 									</div>
 								</div>
@@ -907,7 +983,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 8</div>
-						<div class="ss_content" style="height:225px">
+						<div class="ss_content" style="height:165px">
 							<div class="col-md-7">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -920,8 +996,25 @@
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
+                                        <p>См. код (строка 1000).</p>
 										<?php
-											
+											function translit_replace($s)
+                                            {
+                                                $chars = [
+                                                    "а" => "a", "б" => "b", "в" => "v", "г" => "g", "д" => "d",
+                                                    "е" => "e", "ё" => "yo", "ж" => "zh", "з" => "z", "и" => "i",
+                                                    "й" => "y", "к" => "k", "л" => "l", "м" => "m", "н" => "n",
+                                                    "о" => "o", "п" => "p", "р" => "r", "с" => "s", "т" => "t",
+                                                    "у" => "u", "ф" => "f", "х" => "h", "ц" => "ts", "ч" => "ch",
+                                                    "ш" => "sh", "щ" => "sch", "ъ" => "", "ы" => "y", "ь" => "",
+                                                    "э" => "e", "ю" => "yu", "я" => "ya"
+                                                ];
+                                                $s = mb_strtolower($s);
+                                                $s = str_replace(' ', '_', $s);
+                                                return strtr($s, $chars);
+                                            }
+
+                                            echo translit_replace('Каждый охотник желает знать где сидит фазан');
 										?>										
 									</div>
 								</div>
