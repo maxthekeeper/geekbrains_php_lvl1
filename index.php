@@ -49,6 +49,7 @@
 /***************************************
  * УРОК 1
  ***************************************/
+mb_internal_encoding("UTF-8");
 ?>
 			<div id="my-tab-content" class="tab-content">
 				<div class="tab-pane active" id="lesson1">
@@ -795,7 +796,7 @@
 									<div class="panel-body">
                                         <p>См. код (строка 797).</p>										
 										<?php
-                                            for ($i = 0; $i < 10; print $i . ' | ', $i++);
+                                            for ($i = 0; $i < 10; print ($i . ' | '), $i++);
 										?>										
 									</div>
 								</div>
@@ -838,7 +839,7 @@
                                                     "Клин"
                                                 ],
                                                 "Ленинградская область" => [
-                                                    "Санкт-Петербург",                                                    
+                                                    "Санкт-Петербург",
                                                     "Гатчина",
                                                     "Тосно",
                                                     "Кингисепп"
@@ -892,9 +893,8 @@
 											foreach ($array as $key => $value) {
                                                 echo '<b>' . $key . ':</b><br>';
                                                 foreach ($value as $city) {
-                                                    if(mb_substr($city, 0, 1) == 'К') {
-                                                        echo $city . '<br>';
-                                                    }
+                                                    if (mb_substr($city, 0, 1) == 'К')
+                                                        echo $city . '<br>';                                   
                                                 }
                                             }
 										?>										
@@ -983,7 +983,7 @@
  ***************************************/
 ?>
 						<div class="ss_button">Задание 8</div>
-						<div class="ss_content" style="height:165px">
+						<div class="ss_content" style="height:185px">
 							<div class="col-md-7">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
@@ -1016,6 +1016,30 @@
 
                                             echo translit_replace('Каждый охотник желает знать где сидит фазан');
 										?>										
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php
+/***************************************
+ * Задание 9
+ ***************************************/
+?>
+						<div class="ss_button">Задание 9 (**)</div>
+						<div class="ss_content" style="height:245px">
+							<div class="col-md-9">
+								<div class="panel panel-danger">
+									<div class="panel-heading">Условие</div>
+									<div class="panel-body">
+										<p>Создать форму, в которую пользователь вводит сообщение, а скрипт анализирует введенный текст и, если находит "знакомые слова", то отправляет соответствующую картинку/картинки. Например, введено "Вишневый сад был написан А. П. Чеховым в 1903 году". На сервере есть массив значений array("Вишня", "Вишни", "Вишневый", "Вишневого", "Вишневому", ... ), к которому привязана картинка cherry.jpg, и массив array("Чехов", "Чехову", "Чехове", "Чеховым", "Чехова", ...), к которому привязана картинка chehov.jpg. На запрос пользователя индексируется вся строка и слова сверяются с массивом. В результате чего пользователь должен получить эти два изображения.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="panel panel-success">
+									<div class="panel-heading">Решение</div>
+									<div class="panel-body">
+                                        <p>Решение по <a href="form.php">ссылке</a>.</p>
 									</div>
 								</div>
 							</div>
