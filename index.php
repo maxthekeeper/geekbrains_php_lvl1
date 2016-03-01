@@ -42,7 +42,8 @@
 			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 				<li class="active"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
 				<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li> 
-				<li><a href="#lesson3" data-toggle="tab">Урок 3</a></li> 				           
+                <li><a href="#lesson3" data-toggle="tab">Урок 3</a></li>                           
+				<li><a href="#lesson4" data-toggle="tab">Урок 4</a></li> 				           
 			</ul>
 			
 <?php
@@ -1026,8 +1027,8 @@ mb_internal_encoding("UTF-8");
  ***************************************/
 ?>
 						<div class="ss_button">Задание 9 (**)</div>
-						<div class="ss_content" style="height:245px">
-							<div class="col-md-9">
+						<div class="ss_content" style="height:285px">
+							<div class="col-md-7">
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
 									<div class="panel-body">
@@ -1035,17 +1036,224 @@ mb_internal_encoding("UTF-8");
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-5">
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
-									<div class="panel-body">
-                                        <p>Решение по <a href="form.php">ссылке</a>.</p>
+									<div class="panel-body">                                        
+                                        <?php
+                                            $cherry = [
+                                                'img/cherry.jpg' => [
+                                                    "Вишня",
+                                                    "Вишни",
+                                                    "Вишневый",
+                                                    "Вишневого",
+                                                    "Вишневому"
+                                                ]       
+                                            ];
+                                            $chehov = [
+                                                'img/chehov.jpg' => [
+                                                    "Чехов",
+                                                    "Чехову",
+                                                    "Чехове",
+                                                    "Чеховым",
+                                                    "Чехова"
+                                                ]
+                                            ];
+
+                                            if ($_SERVER['REQUEST_METHOD'] == 'GET') { 
+                                        ?>
+                                                <form action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="message">
+                                                    </div>                                            
+                                                    <button type="submit" class="btn btn-default">Отправить</button>
+                                                </form>
+                                        <?php 
+                                            } else {
+                                                $message_str = explode(' ', $_POST['message']);     
+                                                
+                                                foreach ($message_str as $msg) {
+                                                    
+                                                    foreach ($cherry['img/cherry.jpg'] as $chr) {
+
+                                                        if ($msg == $chr) {
+                                        ?>
+                                            <img src="<?=key($cherry);?>" width="100px">
+                                        <?php
+                                                        }
+                                                    }
+                                                    foreach ($chehov['img/chehov.jpg'] as $chv) {
+                                                        if ($msg == $chv) {
+                                        ?>
+                                            <img src="<?=key($chehov);?>" width="100px">
+                                        <?php
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ?>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
+<?php
+/***************************************
+ * УРОК 4
+ ***************************************/
+?>
+                <div class="tab-pane" id="lesson4">
+                    <div id="ss_menu">
+<?php
+/***************************************
+ * Задание 1
+ ***************************************/
+?>
+                        <h3>Запросы HTTP, параметры URL и формы HTML</h3>
+                        <div class="ss_button">Задание 1</div>
+                        <div class="ss_content" style="height:165px">
+                            <div class="col-md-6">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Обязательно сделайте скрипты, приведенные в качестве примеров в этом уроке.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>См. <a href="http://114010.selcdn.com/learning/teachers/141847/streams/483/C3-2016-02-29T21:54:40.pdf" target="_blank">методичку</a> ))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<?php
+/***************************************
+ * Задание 2
+ ***************************************/
+?>
+                        <div class="ss_button">Задание 2</div>
+                        <div class="ss_content" style="height:245px">
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Превратите получившийся сумматор в калькулятор с четырьмя операциями:
+                                        сложение, вычитание, умножение, деление. Не забудьте обработать деление на ноль!<br>
+                                        Выбор операции можно осуществлять с помощью тега &lt;select&gt;.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <?php
+                                            function mathOp($a, $b, $op) {
+                                                if ($a == "" || $b == "")
+                                                    return "Введите оба числа";
+                                                switch ($op) {
+                                                    case '+':
+                                                        return $a + $b;
+                                                        break;
+                                                    case '-':
+                                                        return $a - $b;
+                                                        break;
+                                                    case '*':
+                                                        return $a * $b;
+                                                        break;
+                                                    case '/':
+                                                        if ($b != 0)
+                                                            return $a / $b;
+                                                        else
+                                                            return "На ноль делить нельзя";
+                                                        break;
+                                                }
+                                            }
+
+                                            if(isset($_POST["a"]) && isset($_POST["b"]) && isset($_POST["op"])) {
+                                                $a = $_POST["a"];
+                                                $b = $_POST["b"];
+                                                $op = $_POST["op"];
+                                                $result = mathOp($a, $b, $op);
+                                                
+                                            } else {
+                                                $a = "";
+                                                $b = "";
+                                                $op = "";
+                                                $result = "";
+                                            }
+                                            
+                                        ?>
+                                        <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
+                                            <div class="form-group">
+                                                <input type="text" name="a" class="form-control" value="<?=$a?>">
+                                            </div>
+                                            <select name="op" class="form-control">
+                                                <option value="+" <?=$op == '+' ? ' selected="selected"' : '';?> >+</option>
+                                                <option value="-" <?=$op == '-' ? ' selected="selected"' : '';?> >-</option>
+                                                <option value="*" <?=$op == '*' ? ' selected="selected"' : '';?> >*</option>
+                                                <option value="/" <?=$op == '/' ? ' selected="selected"' : '';?> >/</option>
+                                            </select>
+                                            <div class="form-group">
+                                                <input type="text" name="b" class="form-control" value="<?=$b?>">
+                                            </div>
+                                            <button type="submit" class="btn btn-default">=</button>
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" value="<?=$result;?>" disabled>
+                                            </div>                                                    
+                                        </form>                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<?php
+/***************************************
+ * Задание 3
+ ***************************************/
+?>
+                        <div class="ss_button">Задание 3 (*)</div>
+                        <div class="ss_content" style="height:285px">
+                            <div class="col-md-4">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Создайте калькулятор, который будет определять тип выбранной пользователем операции, ориентируясь на нажатую кнопку.<br>
+                                        Данные, введённые пользователем в поля, должны сохраняться и выводиться вместе с результатом вычисления.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <?php
+                                            
+                                        ?>
+                                        <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
+                                            <div class="form-group">
+                                                <input type="text" name="a" class="form-control" value="<?=$a?>">
+                                            </div>
+                                            <div class="form-group"><?=$op;?></div>
+                                            <div class="form-group">
+                                                <input type="text" name="b" class="form-control" value="<?=$b?>">
+                                            </div>
+                                            <div class="form-group">= <?=$result;?></div><br><br>
+                                            <button type="submit" name="op" value="+" class="btn btn-default" >+</button>
+                                            <button type="submit" name="op" value="-" class="btn btn-default" >-</button>
+                                            <button type="submit" name="op" value="*" class="btn btn-default" >*</button>
+                                            <button type="submit" name="op" value="/" class="btn btn-default" >/</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 			</div>
 		</div>
