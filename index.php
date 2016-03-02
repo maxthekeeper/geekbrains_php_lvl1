@@ -1,3 +1,102 @@
+<?php
+mb_internal_encoding("UTF-8");
+$tab1 = "active";
+$tab4 = "";
+$display = "none";
+$display2 = "none";
+
+
+/***************************************
+ * УРОК 4
+ ***************************************/
+
+    /***************************************
+     * Задание 2
+     ***************************************/
+
+    function mathOp($anum, $bnum, $op) {
+        if ($anum == "" || $bnum == "")
+            return "Введите оба числа";
+        switch ($op) {
+            case '+':
+                return $anum + $bnum;
+                break;
+            case '-':
+                return $anum - $bnum;
+                break;
+            case '*':
+                return $anum * $bnum;
+                break;
+            case '/':
+                if ($bnum != 0)
+                    return $anum / $bnum;
+                else
+                    return "На ноль делить нельзя";
+                break;
+        }
+    }
+
+    if(isset($_POST["anum"]) && isset($_POST["bnum"]) && isset($_POST["op"])) {
+        $tab1 = "";
+        $tab4 = "active";
+        $display = "block";
+
+        $anum = $_POST["anum"];
+        $bnum = $_POST["bnum"];
+        $op = $_POST["op"];
+        $result = mathOp($anum, $bnum, $op);
+        
+    } else {
+        $anum = "";
+        $bnum = "";
+        $op = "";
+        $result = "";
+    }
+
+    /***************************************
+     * Задание 3
+     ***************************************/
+
+    function mathOp2($anum2, $bnum2, $op2) {
+        if ($anum2 == "" || $bnum2 == "")
+            return "Введите оба числа";
+        switch ($op2) {
+            case '+':
+                return $anum2 + $bnum2;
+                break;
+            case '-':
+                return $anum2 - $bnum2;
+                break;
+            case '*':
+                return $anum2 * $bnum2;
+                break;
+            case '/':
+                if ($bnum2 != 0)
+                    return $anum2 / $bnum2;
+                else
+                    return "На ноль делить нельзя";
+                break;
+        }
+    }
+
+    if(isset($_POST["anum2"]) && isset($_POST["bnum2"]) && isset($_POST["op2"])) {
+        $tab1 = "";
+        $tab4 = "active";
+        $display2 = "block";
+
+        $anum2 = $_POST["anum2"];
+        $bnum2 = $_POST["bnum2"];
+        $op2 = $_POST["op2"];
+        $result2 = mathOp2($anum2, $bnum2, $op2);
+        
+    } else {
+        $anum2 = "";
+        $bnum2 = "";
+        $op2 = "";
+        $result2 = "";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,10 +149,10 @@
 /***************************************
  * УРОК 1
  ***************************************/
-mb_internal_encoding("UTF-8");
+
 ?>
 			<div id="my-tab-content" class="tab-content">
-				<div class="tab-pane active" id="lesson1">
+				<div class="tab-pane <?=$tab1;?>" id="lesson1">
 					
 					<div id="ss_menu">
 <?php
@@ -1021,7 +1120,7 @@ mb_internal_encoding("UTF-8");
 								</div>
 							</div>
 						</div>
-						<?php
+<?php
 /***************************************
  * Задание 9
  ***************************************/
@@ -1040,58 +1139,7 @@ mb_internal_encoding("UTF-8");
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">                                        
-                                        <?php
-                                            $cherry = [
-                                                'img/cherry.jpg' => [
-                                                    "Вишня",
-                                                    "Вишни",
-                                                    "Вишневый",
-                                                    "Вишневого",
-                                                    "Вишневому"
-                                                ]       
-                                            ];
-                                            $chehov = [
-                                                'img/chehov.jpg' => [
-                                                    "Чехов",
-                                                    "Чехову",
-                                                    "Чехове",
-                                                    "Чеховым",
-                                                    "Чехова"
-                                                ]
-                                            ];
-
-                                            if ($_SERVER['REQUEST_METHOD'] == 'GET') { 
-                                        ?>
-                                                <form action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" name="message">
-                                                    </div>                                            
-                                                    <button type="submit" class="btn btn-default">Отправить</button>
-                                                </form>
-                                        <?php 
-                                            } else {
-                                                $message_str = explode(' ', $_POST['message']);     
-                                                
-                                                foreach ($message_str as $msg) {
-                                                    
-                                                    foreach ($cherry['img/cherry.jpg'] as $chr) {
-
-                                                        if ($msg == $chr) {
-                                        ?>
-                                            <img src="<?=key($cherry);?>" width="100px">
-                                        <?php
-                                                        }
-                                                    }
-                                                    foreach ($chehov['img/chehov.jpg'] as $chv) {
-                                                        if ($msg == $chv) {
-                                        ?>
-                                            <img src="<?=key($chehov);?>" width="100px">
-                                        <?php
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        ?>
+                                        <p>Решение по <a href="lesson3_9.php" target="_blank">ссылке</a></p>
 									</div>
 								</div>
 							</div>
@@ -1104,7 +1152,7 @@ mb_internal_encoding("UTF-8");
  * УРОК 4
  ***************************************/
 ?>
-                <div class="tab-pane" id="lesson4">
+                <div class="tab-pane <?=$tab4;?>" id="lesson4">
                     <div id="ss_menu">
 <?php
 /***************************************
@@ -1137,7 +1185,7 @@ mb_internal_encoding("UTF-8");
  ***************************************/
 ?>
                         <div class="ss_button">Задание 2</div>
-                        <div class="ss_content" style="height:245px">
+                        <div class="ss_content" style="height:245px; display: <?=$display;?>">
                             <div class="col-md-4">
                                 <div class="panel panel-danger">
                                     <div class="panel-heading">Условие</div>
@@ -1152,46 +1200,10 @@ mb_internal_encoding("UTF-8");
                                 <div class="panel panel-success">
                                     <div class="panel-heading">Решение</div>
                                     <div class="panel-body">
-                                        <?php
-                                            function mathOp($a, $b, $op) {
-                                                if ($a == "" || $b == "")
-                                                    return "Введите оба числа";
-                                                switch ($op) {
-                                                    case '+':
-                                                        return $a + $b;
-                                                        break;
-                                                    case '-':
-                                                        return $a - $b;
-                                                        break;
-                                                    case '*':
-                                                        return $a * $b;
-                                                        break;
-                                                    case '/':
-                                                        if ($b != 0)
-                                                            return $a / $b;
-                                                        else
-                                                            return "На ноль делить нельзя";
-                                                        break;
-                                                }
-                                            }
-
-                                            if(isset($_POST["a"]) && isset($_POST["b"]) && isset($_POST["op"])) {
-                                                $a = $_POST["a"];
-                                                $b = $_POST["b"];
-                                                $op = $_POST["op"];
-                                                $result = mathOp($a, $b, $op);
-                                                
-                                            } else {
-                                                $a = "";
-                                                $b = "";
-                                                $op = "";
-                                                $result = "";
-                                            }
-                                            
-                                        ?>
+                                        
                                         <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
                                             <div class="form-group">
-                                                <input type="text" name="a" class="form-control" value="<?=$a?>">
+                                                <input type="text" name="anum" class="form-control" value="<?=$anum?>">
                                             </div>
                                             <select name="op" class="form-control">
                                                 <option value="+" <?=$op == '+' ? ' selected="selected"' : '';?> >+</option>
@@ -1200,13 +1212,15 @@ mb_internal_encoding("UTF-8");
                                                 <option value="/" <?=$op == '/' ? ' selected="selected"' : '';?> >/</option>
                                             </select>
                                             <div class="form-group">
-                                                <input type="text" name="b" class="form-control" value="<?=$b?>">
+                                                <input type="text" name="bnum" class="form-control" value="<?=$bnum?>">
                                             </div>
                                             <button type="submit" class="btn btn-default">=</button>
                                             <div class="form-group">
                                                 <input class="form-control" type="text" value="<?=$result;?>" disabled>
                                             </div>                                                    
-                                        </form>                                                
+                                        </form>
+                                        <br>
+                                        <p><a href="lesson4_2.php" target="_blank">Альтернативное решение</a> с помощью eval()</p>
                                     </div>
                                 </div>
                             </div>
@@ -1217,7 +1231,7 @@ mb_internal_encoding("UTF-8");
  ***************************************/
 ?>
                         <div class="ss_button">Задание 3 (*)</div>
-                        <div class="ss_content" style="height:285px">
+                        <div class="ss_content" style="height:285px; display: <?=$display2;?>">
                             <div class="col-md-4">
                                 <div class="panel panel-danger">
                                     <div class="panel-heading">Условие</div>
@@ -1230,28 +1244,31 @@ mb_internal_encoding("UTF-8");
                             <div class="col-md-8">
                                 <div class="panel panel-success">
                                     <div class="panel-heading">Решение</div>
-                                    <div class="panel-body">
-                                        <?php
-                                            
-                                        ?>
+                                    <div class="panel-body">                                        
                                         <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
                                             <div class="form-group">
-                                                <input type="text" name="a" class="form-control" value="<?=$a?>">
+                                                <input type="text" name="anum2" class="form-control" value="<?=$anum2?>">
                                             </div>
-                                            <div class="form-group"><?=$op;?></div>
+                                            <div class="form-group"><?=$op2;?></div>
                                             <div class="form-group">
-                                                <input type="text" name="b" class="form-control" value="<?=$b?>">
+                                                <input type="text" name="bnum2" class="form-control" value="<?=$bnum2?>">
                                             </div>
-                                            <div class="form-group">= <?=$result;?></div><br><br>
-                                            <button type="submit" name="op" value="+" class="btn btn-default" >+</button>
-                                            <button type="submit" name="op" value="-" class="btn btn-default" >-</button>
-                                            <button type="submit" name="op" value="*" class="btn btn-default" >*</button>
-                                            <button type="submit" name="op" value="/" class="btn btn-default" >/</button>
+                                            <div class="form-group">
+                                                = <input class="form-control" type="text" value="<?=$result2;?>" disabled>
+                                            </div>
+                                            <br><br>
+                                            <button type="submit" name="op2" value="+" class="btn btn-default" >+</button>
+                                            <button type="submit" name="op2" value="-" class="btn btn-default" >-</button>
+                                            <button type="submit" name="op2" value="*" class="btn btn-default" >*</button>
+                                            <button type="submit" name="op2" value="/" class="btn btn-default" >/</button>
                                         </form>
+                                        <br>
+                                        <p><a href="lesson4_3.php" target="_blank">Альтернативное решение</a> с помощью eval()</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 

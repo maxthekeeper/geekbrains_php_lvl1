@@ -4,14 +4,21 @@
         $a = $_POST["a"];
         $b = $_POST["b"];
         $op = $_POST["op"];
-        $result = eval("return $a$op$b;");
-        
+
+		if (($a == "") || ($b == ""))
+			$result = "Введите оба числа";         
+		elseif (($b == 0) && ($op == '/'))
+			$result = "На ноль делить нельзя";
+		else 
+			$result = eval("return $a$op$b;");
+                                
     } else {
         $a = "";
         $b = "";
         $op = "";
         $result = "";
-    }        
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +27,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Eval</title>
+	<title>Урок 4 / Задание 2</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">	
 </head>
@@ -54,9 +61,10 @@
 	
 	<div class="container">
 		<div class="panel panel-default">
-            <div class="panel-heading">Eval</div>
+            <div class="panel-heading">Урок 4 / Задание 2</div>
             <div class="panel-body">
-
+				
+				<!-- ФОРМА -->
 				<form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
 			        <div class="form-group">
 			            <input type="text" name="a" class="form-control" value="<?=$a?>">
