@@ -139,10 +139,10 @@ $display2 = "none";
 
 		<div class="container">
 			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-				<li class="active"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
+				<li class="<?=$tab1;?>"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
 				<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li> 
                 <li><a href="#lesson3" data-toggle="tab">Урок 3</a></li>                           
-				<li><a href="#lesson4" data-toggle="tab">Урок 4</a></li> 				           
+				<li class="<?=$tab4;?>"><a href="#lesson4" data-toggle="tab">Урок 4</a></li> 				           
 			</ul>
 			
 <?php
