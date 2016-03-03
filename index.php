@@ -501,7 +501,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>Я решил расширить задание и написать функцию, которая принимает два параметра и в зависимости от условия, выводит на печать результат. Подробности реализации - в исходном коде (строка 402).</p>
+										<p>Я решил расширить задание и написать функцию, которая принимает два параметра и в зависимости от условия, выводит на печать результат. Подробности реализации - в исходном коде (строка 505).</p>
 										<?php
 											function math_ops($a, $b)
 											{
@@ -583,7 +583,7 @@ $display2 = "none";
 													echo $a;
 											}
 										?>
-										<p>Подробности решения см. в исходном коде (строка 445).</p>
+										<p>Подробности решения см. в исходном коде (строка 548).</p>
 									</div>
 								</div>
 							</div>
@@ -607,7 +607,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>Скорее всего в условии опечатка, т.к. 4 основные арифметические операции - это +, -, *, /, а не %. Поэтому я реализовал 5 функций. Решение в исходном коде (строка 508).</p>
+										<p>Скорее всего в условии опечатка, т.к. 4 основные арифметические операции - это +, -, *, /, а не %. Поэтому я реализовал 5 функций. Решение в исходном коде (строка 611).</p>
 										<?php
 											function sum($a, $b)
 											{
@@ -660,7 +660,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>По аналогии с предыдущим заданием, реализовал 5 операций (строка 561).</p>
+										<p>По аналогии с предыдущим заданием, реализовал 5 операций (строка 664).</p>
 										<?php
 											function mathOperation($arg1, $arg2, $operation)
 											{
@@ -713,7 +713,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>Подробности реализации на строке 614.</p>
+										<p>Подробности реализации на строке 717.</p>
 										<?php
 											function power($val, $pow)
 											{
@@ -754,7 +754,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>Реализацию функции см. в исходном коде (строка 655).</p>
+										<p>Реализацию функции см. в исходном коде (строка 758).</p>
 										<?php
 											function time_now()
 											{
@@ -810,7 +810,7 @@ $display2 = "none";
 								<div class="panel panel-danger">
 									<div class="panel-heading">Условие</div>
 									<div class="panel-body">
-										<p>С помощью цикла while выведите все числа в промежутке от 0 до 100, которые делятся на 3 без остатка. </p>									
+										<p>С помощью цикла while выведите все числа в промежутке от 0 до 100, которые делятся на 3 без остатка. </p>
 									</div>
 								</div>
 							</div>
@@ -818,7 +818,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-										<p>См. код (строка 721).</p>
+										<p>См. код (строка 822).</p>
 										<?php
 											$i = 0;
 											while ($i <= 100) {
@@ -856,7 +856,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 759).</p>
+                                        <p>См. код (строка 860).</p>
 										<?php
 											$i = 0;
                                             do {
@@ -894,7 +894,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 797).</p>										
+                                        <p>См. код (строка 898).</p>										
 										<?php
                                             for ($i = 0; $i < 10; print ($i . ' | '), $i++);
 										?>										
@@ -928,7 +928,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 831).</p>
+                                        <p>См. код (строка 932).</p>
                                         <?php
 											$array = [
                                                 "Московская область" => [
@@ -988,7 +988,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 891).</p>
+                                        <p>См. код (строка 992).</p>
 										<?php
 											foreach ($array as $key => $value) {
                                                 echo '<b>' . $key . ':</b><br>';
@@ -1022,7 +1022,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 925).</p>
+                                        <p>См. код (строка 1026).</p>
 										<?php
                                             function rus2lat($string) 
                                             {
@@ -1038,7 +1038,6 @@ $display2 = "none";
                                                 $string = mb_strtolower($string);
                                                 return strtr($string, $chars);
                                             }
-
                                             echo rus2lat('Каждый охотник желает знать где сидит фазан');
 										?>										
 									</div>
@@ -1064,7 +1063,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 968).</p>
+                                        <p>См. код (строка 1067).</p>
 										<?php
 											function replace($str) 
                                             {
@@ -1096,7 +1095,7 @@ $display2 = "none";
 								<div class="panel panel-success">
 									<div class="panel-heading">Решение</div>
 									<div class="panel-body">
-                                        <p>См. код (строка 1000).</p>
+                                        <p>См. код (строка 1099).</p>
 										<?php
 											function translit_replace($s)
                                             {
@@ -1200,7 +1199,7 @@ $display2 = "none";
                                 <div class="panel panel-success">
                                     <div class="panel-heading">Решение</div>
                                     <div class="panel-body">
-                                        
+                                        <p>Подробности реализации на строке 17 (логика) и строке 1203 (форма).</p>
                                         <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
                                             <div class="form-group">
                                                 <input type="text" name="anum" class="form-control" value="<?=$anum?>">
@@ -1244,7 +1243,8 @@ $display2 = "none";
                             <div class="col-md-8">
                                 <div class="panel panel-success">
                                     <div class="panel-heading">Решение</div>
-                                    <div class="panel-body">                                        
+                                    <div class="panel-body">
+                                        <p>Подробности реализации на строке 60 (логика) и строке 1248 (форма).</p>
                                         <form class="form-inline" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
                                             <div class="form-group">
                                                 <input type="text" name="anum2" class="form-control" value="<?=$anum2?>">
