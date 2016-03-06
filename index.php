@@ -104,7 +104,7 @@ $display2 = "none";
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>PHP Level 1</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap1.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -142,7 +142,8 @@ $display2 = "none";
 				<li class="<?=$tab1;?>"><a href="#lesson1" data-toggle="tab">Урок 1</a></li>
 				<li><a href="#lesson2" data-toggle="tab">Урок 2</a></li> 
                 <li><a href="#lesson3" data-toggle="tab">Урок 3</a></li>                           
-				<li class="<?=$tab4;?>"><a href="#lesson4" data-toggle="tab">Урок 4</a></li> 				           
+				<li class="<?=$tab4;?>"><a href="#lesson4" data-toggle="tab">Урок 4</a></li>
+				<li><a href="#lesson5" data-toggle="tab">Урок 5</a></li>
 			</ul>
 			
 <?php
@@ -1264,6 +1265,66 @@ $display2 = "none";
                                         </form>
                                         <br>
                                         <p><a href="lesson4_3.php" target="_blank">Альтернативное решение</a> с помощью eval()</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+<?php
+/***************************************
+ * УРОК 5
+ ***************************************/
+?>
+                <div class="tab-pane" id="lesson5">
+                    <div id="ss_menu">
+<?php
+/***************************************
+ * Задание 1
+ ***************************************/
+?>
+                        <h3>Cookies и сессии</h3>
+                        <div class="ss_button">Задание 1</div>
+                        <div class="ss_content" style="height:195px">
+                            <div class="col-md-8">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Создайте главную страницу сайта index.php, которая будет неавторизованных пользователей отправлять на страницу авторизации, а авторизованных на ту страницу, которую они посещали последний раз ("А" или "Б"). Для пользователя не будет видно главной страницы, она нужна только для перенаправления.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson5/index.php" target="_blank">ссылке</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<?php
+/***************************************
+ * Задание 2
+ ***************************************/
+?>
+                        <div class="ss_button">Задание 2 (*)</div>
+                        <div class="ss_content" style="height:245px; display: <?=$display;?>">
+                            <div class="col-md-8">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Создайте три css файла с разными стилями. Затем сделайте страничку setting.php, на которой пользователь сможет выбрать себе один из вариантов оформления сайта. Информация о стиле сохраняется в куках и затем используется при показе страничек.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson5/setting.php" target="_blank">ссылке</a></p>
                                     </div>
                                 </div>
                             </div>

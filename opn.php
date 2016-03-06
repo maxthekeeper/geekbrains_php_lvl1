@@ -36,7 +36,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Урок 4 / Задание 4</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">	
+	<link href="css/style1.css" rel="stylesheet">	
 </head>
 <body>
 	<nav class="navbar navbar-default">
