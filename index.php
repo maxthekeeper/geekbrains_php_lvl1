@@ -144,6 +144,7 @@ $display2 = "none";
                 <li><a href="#lesson3" data-toggle="tab">Урок 3</a></li>                           
 				<li class="<?=$tab4;?>"><a href="#lesson4" data-toggle="tab">Урок 4</a></li>
 				<li><a href="#lesson5" data-toggle="tab">Урок 5</a></li>
+				<li><a href="#lesson6" data-toggle="tab">Урок 6</a></li>
 			</ul>
 			
 <?php
@@ -1311,7 +1312,7 @@ $display2 = "none";
  ***************************************/
 ?>
                         <div class="ss_button">Задание 2 (*)</div>
-                        <div class="ss_content" style="height:245px; display: <?=$display;?>">
+                        <div class="ss_content" style="height:185px">
                             <div class="col-md-8">
                                 <div class="panel panel-danger">
                                     <div class="panel-heading">Условие</div>
@@ -1325,6 +1326,69 @@ $display2 = "none";
                                     <div class="panel-heading">Решение</div>
                                     <div class="panel-body">
                                         <p>Решение по <a href="lesson5/setting.php" target="_blank">ссылке</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+<?php
+/***************************************
+ * УРОК 6
+ ***************************************/
+?>
+                <div class="tab-pane" id="lesson6">
+                    <div id="ss_menu">
+<?php
+/***************************************
+ * Задание 1
+ ***************************************/
+?>
+                        <h3>Работа с файлами</h3>
+                        <div class="ss_button">Задание 1</div>
+                        <div class="ss_content" style="height:215px">
+                            <div class="col-md-8">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Создайте галерею фотографий. Она должна состоять всего из одной странички, на которой пользователь видит все картинки в уменьшенном виде и форму для загрузки нового изображения. При клике на фотографию она должна открыться в браузере в новой вкладке. Размер картинок можно ограничивать с помощью свойства width.<br>
+                                        При загрузке изображения необходимо делать проверку на тип и размер файла.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson6/index.php" target="_blank">ссылке</a></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<?php
+/***************************************
+ * Задание 2
+ ***************************************/
+?>
+                        <div class="ss_button">Задание 2 (*)</div>
+                        <div class="ss_content" style="height:245px">
+                            <div class="col-md-7">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>При загрузке изображения на сервер должна создаваться его уменьшенная копия. А на странице index.php должны выводиться именно копии. На реальных сайтах это активно используется для экономии трафика. При клике на уменьшенное изображение в браузере в новой вкладке должен открываться оригинал изображения.<br>
+                                        Функция изменения размера картинок дана в исходниках. Вам необходимо суметь встроить её в систему. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson6/index.php" target="_blank">ссылке</a></p>
+                                        <p>В этом задании я решил использовать класс для обработки изображений ImageMagick, консольный вариант которого я активно использую в повседневной работе при написании bash-скриптов для обработки сканированных документов и который, как оказалось, доступен в php.</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,3 +1,50 @@
+<?php
+
+	$max_size = 1024 * 1024 * 5; // 5 Mb
+	$upload_dir = 'img/'; // директория для загрузки файлов
+	$thumbnails_dir = 'img/thumbnails/'; // директория для уменьшенных копий
+	$message = ''; // переменная для вывода сообщений под формой
+	$message_class = ''; // переменная для класса сообщений
+
+	// файл загружен?
+	if (isset($_FILES['file'])) {
+		// файл загружен методом POST?
+		if (is_uploaded_file($_FILES['file']['tmp_name'])) {
+			
+			// файл
+			$file = $_FILES['file']['tmp_name'];
+
+			// проверяем размер файла
+			if (filesize($file) > $max_size) {
+
+				// если больше 5 Мб - выводим ошибку
+				$message = "Файл слишком большой";
+				$message_class = 'text-danger';
+			} else {
+
+				// сохраняем файл в директории
+				if (move_uploaded_file($file, $upload_dir . $_FILES['file']['name'])) {
+					
+					// меняем права
+					chmod($upload_dir . $_FILES['file']['name'], 0777);
+
+					// делаем уменьшенную копию загруженного изображения
+					$thumbnail = new Imagick();
+					$thumbnail->readImage($upload_dir . $_FILES['file']['name']);
+					$thumbnail->cropThumbnailImage(180, 135);
+					$thumbnail->writeImage($thumbnails_dir . $_FILES['file']['name']);
+
+					// меняем права
+					chmod($thumbnails_dir . $_FILES['file']['name'], 0777);
+
+					// выводим сообщение
+					$message = 'Файл успешно загружен';
+					$message_class = 'text-success';
+				}
+			}
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,20 +98,24 @@
 							            <div class="panel-body">
 											
 											<!-- ФОРМА -->
-											<form class="form-horizontal" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
+											<form class="form-horizontal" enctype="multipart/form-data" action="<?php echo htmlentities($_SERVER['SCRIPT_NAME']) ?>" method="POST">
 										        <div class="form-group">
-										        	<label class="col-sm-3 control-label" for="name">Выберите файл</label>
+										        	<label class="col-sm-3 control-label" for="file">Выберите файл</label>
 										        	<div class="col-sm-8">
-										        		<input type="file" name="file" class="form-control">
+										        		<input type="file" accept="image/jpeg" name="file" class="form-control">					        		
 										        		<p class="help-block">Загрузите файл в формате .jpg</p>
 										        	</div>			            
 										        </div>
 										        <div class="form-group">
 										        	<div class="col-sm-offset-3 col-sm-6">
-										        		<button type="submit" class="btn btn-default ">Загрузить</button>
+										        		<input type="submit" class="btn btn-default ">
 										        	</div>			        	
 										        </div>
+										        <div class="col-sm-offset-3 col-sm-6">
+										        	<p class="<?=$message_class;?>"><?=$message;?></p>
+										        </div>
 										    </form>
+										    
 										</div>
 									</div>
 								</div>
@@ -74,13 +125,14 @@
 
 						<?php
 						$dir = "img/";
+						$thumb_dir = "img/thumbnails/";
 
 						if (is_dir($dir)) {
 							if ($fd = opendir($dir)){
 								while (($file = readdir($fd)) !== false) {
 									if (substr($file, -4) == '.jpg') {				
 						?>
-										<a href="<?=$dir.$file;?>" target="_blank"><img src="<?=$dir.$file;?>" alt="" width="180"></a>
+										<a href="<?=$dir.$file;?>" target="_blank"><img src="<?=$thumb_dir.$file;?>"></a>
 						<?php
 									}
 								}
