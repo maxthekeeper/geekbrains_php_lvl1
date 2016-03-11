@@ -145,6 +145,7 @@ $display2 = "none";
 				<li class="<?=$tab4;?>"><a href="#lesson4" data-toggle="tab">Урок 4</a></li>
 				<li><a href="#lesson5" data-toggle="tab">Урок 5</a></li>
 				<li><a href="#lesson6" data-toggle="tab">Урок 6</a></li>
+				<li><a href="#lesson7" data-toggle="tab">Урок 7</a></li>
 			</ul>
 			
 <?php
@@ -1389,6 +1390,70 @@ $display2 = "none";
                                     <div class="panel-body">
                                         <p>Решение по <a href="lesson6/index.php" target="_blank">ссылке</a></p>
                                         <p>В этом задании я решил использовать класс для обработки изображений ImageMagick, консольный вариант которого я активно использую в повседневной работе при написании bash-скриптов для обработки сканированных документов и который, как оказалось, доступен в php.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+<?php
+/***************************************
+ * УРОК 7
+ ***************************************/
+?>
+                <div class="tab-pane" id="lesson7">
+                    <div id="ss_menu">
+<?php
+/***************************************
+ * Задание 1
+ ***************************************/
+?>
+                        <h3>Работа с базой данных</h3>
+                        <div class="ss_button">Задание 1</div>
+                        <div class="ss_content" style="height:215px">
+                            <div class="col-md-8">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>Создать галерею изображений, состоящую из двух страниц:<br>
+                                        index.php – просмотр всех фотографий (уменьшенных копий);<br>
+                                        photo.php – просмотр конкретной фотографии (изображение оригинального размера).<br>
+                                        В базе данных создать таблицу, в которой будет храниться информация о картинках.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson7/index.php" target="_blank">ссылке</a></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<?php
+/***************************************
+ * Задание 2
+ ***************************************/
+?>
+                        <div class="ss_button">Задание 2 (*)</div>
+                        <div class="ss_content" style="height:245px">
+                            <div class="col-md-7">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">Условие</div>
+                                    <div class="panel-body">
+                                        <p>На странице просмотра фотографии полного размера под картинкой должно быть указано число ее просмотров.<br>
+                                        На странице просмотра галереи список фотографий должен быть отсортирован по популярности. Популярность - число кликов по фотографии.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">Решение</div>
+                                    <div class="panel-body">
+                                        <p>Решение по <a href="lesson7/index.php" target="_blank">ссылке</a></p>                                        
                                     </div>
                                 </div>
                             </div>
