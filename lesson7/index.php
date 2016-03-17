@@ -163,7 +163,6 @@
 
 							mysqli_close($db);
 						?>
-
 					</div>
 				</div>
 			</div>
